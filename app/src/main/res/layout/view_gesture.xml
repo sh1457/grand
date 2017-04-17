@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/v_margin"
+    android:gravity="center_vertical"
+    tools:context="sh1457.test.com.grand.ViewGestureActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar_2"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/gesture_view_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/gesture_view_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/h_margin"
+        android:layout_marginEnd="@dimen/h_margin"
+        android:layout_marginTop="@dimen/v_margin"
+        android:layout_marginBottom="@dimen/v_margin"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/app_name"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorBlack" />
+
+    <android.support.v7.app.AlertController.RecycleListView
+        android:id="@+id/gesture_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/h_margin"
+        android:layout_marginEnd="@dimen/h_margin"
+        android:layout_marginTop="@dimen/v_margin"
+        app:layout_constraintTop_toBottomOf="@+id/gesture_view_txt"
+        app:layout_constraintLeft_toLeftOf="parent" >
+    </android.support.v7.app.AlertController.RecycleListView>
+
+</android.support.constraint.ConstraintLayout>
