@@ -9,14 +9,10 @@
     android:gravity="center_vertical"
     tools:context="sh1457.test.com.grand.AddActionActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar_5"
+    <include layout="@layout/titlebar"
+        android:id="@+id/toolbar"
         android:layout_width="0dp"
         android:layout_height="56dp"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/action_add_txt"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -28,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/h_margin"
         android:layout_marginTop="@dimen/v_margin"
-        app:layout_constraintTop_toBottomOf="@+id/my_toolbar_5"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="@string/action_add_txt"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
@@ -44,4 +40,20 @@
         app:layout_constraintLeft_toLeftOf="parent" >
 
     </android.support.v7.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="@dimen/h_margin"
+        android:layout_marginBottom="@dimen/v_margin"
+        android:elevation="2dp"
+        android:scaleX="2.0"
+        android:scaleY="2.0"
+        android:background="@color/colorPrimary"
+        android:tint="@color/colorAccent"
+        android:src="@android:drawable/ic_input_add" />
+
 </android.support.constraint.ConstraintLayout>

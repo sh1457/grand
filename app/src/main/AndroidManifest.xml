@@ -28,6 +28,15 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+            android:name=".GrandActivity"
+            android:label="@string/title_activity_grand"
+            android:parentActivityName=".MainActivity" >
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
             android:name=".ViewActionActivity"
             android:label="@string/title_activity_action_view"
             android:parentActivityName=".MainActivity" >
@@ -63,6 +72,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
     </application>
 
 </manifest>

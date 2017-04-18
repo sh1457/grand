@@ -12,7 +12,7 @@ public class AddGestureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_gesture);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar_4);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
 
         // Get a support ActionBar corresponding to this toolbar
