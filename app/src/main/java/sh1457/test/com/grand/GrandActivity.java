@@ -13,6 +13,9 @@ import android.util.Log;
 import android.widget.Toast;
 
 public class GrandActivity extends AppCompatActivity implements SensorEventListener {
+    private static final int threshold_x=2;
+    private static final int threshold_y=2;
+
     SensorManager manager;
     Sensor accelerometer;
 
@@ -61,19 +64,19 @@ public class GrandActivity extends AppCompatActivity implements SensorEventListe
         history[0] = event.values[0];
         history[1] = event.values[1];
 
-        if (xChange > 2){
+        if (xChange > threshold_x) {
             x = -1;
-        } else if (xChange < -2){
+        } else if (xChange < -threshold_x) {
             x = 1;
         }
 
-        if (yChange > 2){
+        if (yChange > threshold_y){
             y = -1;
-        }else if (yChange < -2){
+        }else if (yChange < -threshold_y) {
             y = 1;
         }
 
-        Show_Toast(++counter+" >> x : "+x+"   y : "+y);
+        Show_Toast(++counter+" >> x : "+xChange+"   y : "+yChange);
 //        gesture.recordMove(x, y);
     }
 
